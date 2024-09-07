@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="DevCut Barbearia oferece uma experiência única para desenvolvedores com serviços modernos de corte de cabelo, aparar barba e tratamento capilar.">
+    <meta name="keywords" content="barbearia, corte de cabelo, aparar barba, tratamento capilar, desenvolvedores">
+    <meta name="author" content="DevCut Barbearia">
+    <title>DevCut Barbearia</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    <header>
+        <nav id="navbar">
+            <a href="#home" class="logo"><i class="fa-solid fa-ruler"></i> DevCut</a>
+            <ul id="nav_list">
+                <li class="nav-item active"><a href="#home">Home</a></li>
+                <li class="nav-item"><a href="#servicos">Serviços</a></li>
+                <li class="nav-item"><a href="#sobre">Sobre Nós</a></li>
+                <li class="nav-item"><a href="#contato">Contato</a></li>
+            </ul>
+            <button class="btn-default">Agendar</button>
+            <button id="mobile_btn" class="mobile_btn" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
+        </nav>
+        <div id="mobile_servicos">
+            <ul id="mobile_nav_list">
+                <li class="nav-item"><a href="#home">Home</a></li>
+                <li class="nav-item"><a href="#servicos">Serviços</a></li>
+                <li class="nav-item"><a href="#sobre">Sobre Nós</a></li>
+                <li class="nav-item"><a href="#contato">Contato</a></li>
+            </ul>
+            <button class="btn-default">Agendar</button>
+        </div>
+    </header>
+    <main>
+        <section id="home" class="hero-section">
+            <div class="hero">
+                <h2>Bem-vindo à DevCut</h2>
+                <p>A melhor barbearia</p>
+                <a href="#servicos" class="btn btn-primary">Nossos Serviços</a>
+            </div>
+        </section>
+        <section id="servicos" class="services-section">
+            <h2>Serviços</h2>
+            <div class="service-container">
+                <div class="service">
+                    <img src="corte.jpg" alt="Corte de Cabelo">
+                    <h3>Corte de Cabelo</h3>
+                    <p>Estilos modernos e clássicos.</p>
+                </div>
+                <div class="service">
+                    <img src="barba.jpg" alt="Aparar Barba">
+                    <h3>Aparar Barba</h3>
+                    <p>Deixe sua barba impecável.</p>
+                </div>
+                <div class="service">
+                    <img src="tratamento.jpg" alt="Tratamento Capilar">
+                    <h3>Tratamento Capilar</h3>
+                    <p>Cuide da saúde do seu cabelo.</p>
+                </div>
+            </div>
+        </section>
+        <!--
+        <section id="sobre" class="about-section">
+            <h2>Sobre Nós</h2>
+            <p>Na DevCut, combinamos tecnologia e estilo para oferecer a melhor experiência de barbearia.</p>
+        </section>
+        <section id="contato" class="contact-section">
+            <h2>Contato</h2>
+            <form>
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Mensagem:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
+        </section>
+    </main>
+-->
+    <footer>
+        <p>© 2024 DevCut Barbearia. Todos os direitos reservados.</p>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>
