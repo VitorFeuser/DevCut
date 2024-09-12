@@ -105,7 +105,7 @@ header {
 }
 
 .hero {
-    background: url('barbearia.jpg') no-repeat center center/cover;
+    background: url('IMG/barbearia.jpg') no-repeat center center/cover;
     color: white;
     height: 100%;
     display: flex;
