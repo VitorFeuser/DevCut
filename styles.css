@@ -138,7 +138,7 @@ header {
 }
 
 .btn-primary:hover {
-    background-color:darkslategray;
+    background-color: darkslategray;
 }
 
 .services-section, .about-section, .contact-section {
@@ -148,22 +148,33 @@ header {
 
 .service-container {
     display: flex;
-    gap: 1rem;
+    gap: 2rem;
     flex-wrap: wrap;
     justify-content: center;
 }
 
 .service {
     background: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    padding: 1rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
     width: 300px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 .service img {
     width: 100%;
-    border-radius: 10px;
+    border-radius: 15px;
+    transition: transform 0.3s;
+}
+
+.service img:hover {
+    transform: scale(1.05);
 }
 
 footer {
@@ -176,6 +187,113 @@ footer {
     width: 100%;
 }
 
+/* Seção de Agendamento */
+.agendamento-section {
+    max-width: 600px;
+    margin: 100px auto 50px;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.agendamento-section h2 {
+    text-align: center;
+    color: darkslategray;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.agendamento-section form {
+    display: flex;
+    flex-direction: column;
+}
+
+.agendamento-section label {
+    font-weight: 600;
+    margin: 0.5rem 0;
+    color: darkslategray;
+}
+
+.agendamento-section input,
+.agendamento-section select {
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.agendamento-section input:focus,
+.agendamento-section select:focus {
+    border-color: darkslategray;
+}
+
+.agendamento-section .btn-primary {
+    padding: 0.75rem;
+    background-color: darkslategray;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.agendamento-section .btn-primary:hover {
+    background-color: #6f9191;
+}
+
+#confirmationMessage {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    text-align: center;
+    color: darkslategrey;
+    font-size: 1rem;
+}
+
+/* Seção de Confirmação */
+.confirmacao-container {
+    max-width: 600px;
+    margin: 100px auto;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.confirmacao-container h2 {
+    color: darkslategray;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.confirmacao-container p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+/* Botões de Agendamento e Confirmação */
+.btn-primary {
+    padding: 0.75rem 1.5rem;
+    background-color: darkslategray;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #6f9191;
+}
+
+/* Responsividade */
 @media screen and (max-width: 1170px) {
     #nav_list {
         display: none;
@@ -199,3 +317,22 @@ footer {
     }
 }
 
+@media screen and (max-width: 768px) {
+    .agendamento-section {
+        padding: 1rem;
+        margin: 80px auto 50px;
+    }
+
+    .agendamento-section h2 {
+        font-size: 1.75rem;
+    }
+
+    .agendamento-section input,
+    .agendamento-section select {
+        font-size: 0.95rem;
+    }
+
+    .agendamento-section .btn-primary {
+        font-size: 0.95rem;
+    }
+}

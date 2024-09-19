@@ -11,14 +11,21 @@
 </head>
 <body>
     <header>
-        <nav>
-            <a href="index.html" class="logo"><i class="fa-solid fa-ruler"></i> DevCut</a>
+        <nav id="navbar">
+            <a href="DevCut.html" class="logo"><i class="fa-solid fa-ruler"></i> DevCut</a>
             <ul id="nav_list">
-                <li class="nav-item"><a href="index.html#home">Home</a></li>
-                <li class="nav-item"><a href="index.html#servicos">Serviços</a></li>
-                <li class="nav-item"><a href="index.html#sobre">Sobre Nós</a></li>
-                <li class="nav-item"><a href="index.html#contato">Contato</a></li>
+                <li class="nav-item"><a href="DevCut.html#home">Home</a></li>
+                <li class="nav-item"><a href="DevCut.html#servicos">Serviços</a></li>
+                <li class="nav-item"><a href="DevCut.html#sobre">Sobre Nós</a></li>
             </ul>
+            <button id="mobile_btn" class="btn-default">&#9776;</button>
+            <div id="mobile_servicos">
+                <ul id="mobile_nav_list">
+                    <li class="nav-item"><a href="DevCut.html#home">Home</a></li>
+                    <li class="nav-item"><a href="DevCut.html#servicos">Serviços</a></li>
+                    <li class="nav-item"><a href="DevCut.html#sobre">Sobre Nós</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
     <main>
@@ -27,9 +34,9 @@
             <form id="agendamentoForm" action="confirmacao.html" method="POST">
                 <label for="nome">Nome:</label>
                 <input type="text" id="nome" name="nome" required>
-                
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+
+                <label for="whatsapp">WhatsApp:</label>
+                <input type="text" id="whatsapp" name="whatsapp" placeholder="(xx) xxxxx-xxxx" required>
 
                 <label for="servico">Serviço:</label>
                 <select id="servico" name="servico" required>
@@ -51,5 +58,27 @@
     <footer>
         <p>© 2024 DevCut Barbearia. Todos os direitos reservados.</p>
     </footer>
+
+    <script>
+        document.getElementById('agendamentoForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Impede o envio real do formulário
+
+            // Captura os valores dos inputs
+            const nome = document.getElementById('nome').value;
+            const whatsapp = document.getElementById('whatsapp').value;
+            const servico = document.getElementById('servico').value;
+            const data = document.getElementById('data').value;
+            const horario = document.getElementById('horario').value;
+
+            // Verifica se todos os campos foram preenchidos
+            if (nome && whatsapp && servico && data && horario) {
+                // Redireciona para a página de confirmação com os dados no URL (query parameters)
+                window.location.href = `confirmacao.html?nome=${nome}&whatsapp=${whatsapp}&servico=${servico}&data=${data}&horario=${horario}`;
+            } else {
+                // Mostra uma mensagem de erro caso algo esteja errado
+                alert("Por favor, preencha todos os campos.");
+            }
+        });
+    </script>
 </body>
 </html>
