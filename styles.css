@@ -8,13 +8,13 @@
 }
 
 body {
-    background-color: #C0C0C0;
+    background-color: #5f5d5d;
 }
 
 header {
     width: 100%;
     padding: 28px 8%;
-    background-color: #ffffff;
+    background-color: #333333d5;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
     position: fixed;
     top: 0;
@@ -31,7 +31,7 @@ header {
 
 .logo {
     text-decoration: none;
-    color: darkslategrey;
+    color: #fff;
     font-weight: 700;
     font-size: 1.5rem;
     display: flex;
@@ -48,17 +48,17 @@ header {
 .nav-item a {
     text-decoration: none;
     font-weight: 600;
-    color: darkslategrey;
+    color: #fff;
     transition: color 0.3s, transform 0.3s;
 }
 
 .nav-item a:hover {
-    color: #6f9191;
+    color: rgb(95, 91, 91);
     transform: scale(1.1);
 }
 
 .nav-item.active a {
-    color: black;
+    color: #fff;
     border-bottom: 4px solid #222;
 }
 
@@ -77,7 +77,7 @@ header {
 }
 
 .btn-default:hover {
-    background-color: gainsboro;
+    background-color: rgb(129, 127, 127);
 }
 
 #mobile_btn {
@@ -132,13 +132,13 @@ header {
     margin-top: 1rem;
     display: inline-block;
     font-weight: bold;
-    background-color: darkslategray;
-    color: white;
+    background-color: #333;
+    color: #333;
     transition: background-color 0.3s ease;
 }
 
 .btn-primary:hover {
-    background-color: darkslategray;
+    background-color: #333;
 }
 
 .services-section, .about-section, .contact-section {
@@ -161,7 +161,9 @@ header {
     width: 300px;
     transition: transform 0.3s, box-shadow 0.3s;
 }
-
+.service h2{
+    background-color: #333;
+}
 .service:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
@@ -180,7 +182,7 @@ header {
 footer {
     text-align: center;
     padding: 1rem;
-    background: #333;
+    background: #333333d5;
     color: white;
     position: fixed;
     bottom: 0;
@@ -199,7 +201,7 @@ footer {
 
 .agendamento-section h2 {
     text-align: center;
-    color: darkslategray;
+    color: #333;
     font-size: 2rem;
     margin-bottom: 1.5rem;
 }
@@ -212,7 +214,7 @@ footer {
 .agendamento-section label {
     font-weight: 600;
     margin: 0.5rem 0;
-    color: darkslategray;
+    color: #333;
 }
 
 .agendamento-section input,
@@ -228,12 +230,12 @@ footer {
 
 .agendamento-section input:focus,
 .agendamento-section select:focus {
-    border-color: darkslategray;
+    border-color: #333;
 }
 
 .agendamento-section .btn-primary {
     padding: 0.75rem;
-    background-color: darkslategray;
+    background-color: #333;
     color: white;
     border: none;
     border-radius: 5px;
@@ -243,7 +245,7 @@ footer {
 }
 
 .agendamento-section .btn-primary:hover {
-    background-color: #6f9191;
+    background-color: #535353;
 }
 
 #confirmationMessage {
@@ -252,7 +254,7 @@ footer {
     background-color: #f9f9f9;
     border-radius: 5px;
     text-align: center;
-    color: darkslategrey;
+    color: #333;
     font-size: 1rem;
 }
 
@@ -268,7 +270,7 @@ footer {
 }
 
 .confirmacao-container h2 {
-    color: darkslategray;
+    color: #333;
     font-size: 2rem;
     margin-bottom: 1.5rem;
 }
@@ -281,7 +283,7 @@ footer {
 /* Botões de Agendamento e Confirmação */
 .btn-primary {
     padding: 0.75rem 1.5rem;
-    background-color: darkslategray;
+    background-color: #333;
     color: white;
     text-decoration: none;
     border-radius: 5px;
@@ -290,7 +292,7 @@ footer {
 }
 
 .btn-primary:hover {
-    background-color: #6f9191;
+    background-color: #4e5050;
 }
 
 /* Responsividade */

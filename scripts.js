@@ -7,14 +7,14 @@ $(document).ready(function(){
 document.getElementById('agendamentoForm').addEventListener('submit', function(event) {
     event.preventDefault(); // Impede o envio real do formulário
 
-    // Captura os valores dos inputs
+    // Captura os valores 
     const nome = document.getElementById('nome').value;
     const email = document.getElementById('email').value;
     const servico = document.getElementById('servico').value;
     const data = document.getElementById('data').value;
     const horario = document.getElementById('horario').value;
 
-    // Verifica se todos os campos foram preenchidos (já são obrigatórios no HTML)
+    // Verifica se todos os campos foram preenchidos 
     if (nome && email && servico && data && horario) {
         // Simulação de um envio bem-sucedido
         const confirmationMessage = `
@@ -70,3 +70,5 @@ if (nome && email && servico && data && horario) {
     alert("Por favor, preencha todos os campos para continuar com o agendamento.");
 }
 });
+
+/*SLIDER */
