@@ -5,9 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Sistema de agendamento da DevCut Barbearia">
     <meta name="keywords" content="agendamento, barbearia, corte de cabelo, aparar barba">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
     <meta name="author" content="DevCut Barbearia">
     <title>Agendamento - DevCut Barbearia</title>
     <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
     <header>
@@ -31,13 +35,11 @@
     <main>
         <section class="agendamento-section">
             <h2>Agendamento</h2>
-            <form id="agendamentoForm" action="confirmacao.html" method="POST">
+            <form id="agendamentoForm">
                 <label for="nome">Nome:</label>
                 <input type="text" id="nome" name="nome" required>
-
-                <label for="whatsapp">WhatsApp:</label>
-                <input type="text" id="whatsapp" name="whatsapp" placeholder="(xx) xxxxx-xxxx" required>
-
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
                 <label for="servico">Serviço:</label>
                 <select id="servico" name="servico" required>
                     <option value="corte">Corte de Cabelo - R$45</option>
@@ -46,43 +48,18 @@
                     <option value="sobrancelha">Sobrancelha - R$15</option>
                     <option value="infantil">Corte infantil - R$25</option>
                     <option value="limpeza">Limpeza de pele - R$100</option>
-
                 </select>
-
                 <label for="data">Data:</label>
                 <input type="date" id="data" name="data" required>
-
                 <label for="horario">Horário:</label>
                 <input type="time" id="horario" name="horario" required>
-
                 <button type="submit" class="btn-primary">Agendar</button>
             </form>
+            <div id="confirmationMessage"></div>
         </section>
     </main>
     <footer>
         <p>© 2024 DevCut Barbearia. Todos os direitos reservados.</p>
     </footer>
-
-    <script>
-        document.getElementById('agendamentoForm').addEventListener('submit', function(event) {
-            event.preventDefault(); // Impede o envio real do formulário
-
-            // Captura os valores dos inputs
-            const nome = document.getElementById('nome').value;
-            const whatsapp = document.getElementById('whatsapp').value;
-            const servico = document.getElementById('servico').value;
-            const data = document.getElementById('data').value;
-            const horario = document.getElementById('horario').value;
-
-            // Verifica se todos os campos foram preenchidos
-            if (nome && whatsapp && servico && data && horario) {
-                // Redireciona para a página de confirmação com os dados no URL (query parameters)
-                window.location.href = `confirmacao.html?nome=${nome}&whatsapp=${whatsapp}&servico=${servico}&data=${data}&horario=${horario}`;
-            } else {
-                // Mostra uma mensagem de erro caso algo esteja errado
-                alert("Por favor, preencha todos os campos.");
-            }
-        });
-    </script>
 </body>
 </html>
