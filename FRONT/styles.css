@@ -14,7 +14,7 @@ body {
 header {
     width: 100%;
     padding: 28px 8%;
-    background-color: #333333d5;
+    background-color: rgba(51, 51, 51, 0.85);
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
     position: fixed;
     top: 0;
@@ -29,7 +29,7 @@ header {
     justify-content: space-between;
 }
 
-/*Logo*/
+/* Logo */
 .logo {
     text-decoration: none;
     color: #fff;
@@ -65,14 +65,14 @@ header {
 
 .btn-default {
     border: none;
-    display: flex;
+    display: block;
     align-items: center;
     justify-content: center;
     background-color: white;
     border-radius: 12px;
     padding: 10px 14px;
     font-weight: 600;
-    box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.1);
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.1);
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
@@ -82,7 +82,11 @@ header {
 }
 
 #mobile_btn {
-    display: none;
+    display: block;
+    border: none;
+    background-color: transparent;
+    font-size: 1.5rem;
+    cursor: pointer;
 }
 
 #mobile_servicos {
@@ -90,6 +94,10 @@ header {
     flex-direction: column;
     align-items: center;
     gap: 12px;
+}
+
+#mobile_servicos.active {
+    display: flex;
 }
 
 #mobile_nav_list {
@@ -135,17 +143,18 @@ header {
     display: inline-block;
     font-weight: bold;
     background-color: #333;
-    color: #333;
+    color: #fff;
     transition: background-color 0.3s ease;
 }
 
 .btn-primary:hover {
-    background-color: #333;
+    background-color: #4e5050;
 }
 
-/*Serviços*/
-
-.services-section, .about-section, .contact-section {
+/* Seções de Serviços, Sobre, Contato */
+.services-section,
+.about-section,
+.contact-section {
     padding: 2rem 8%;
     text-align: center;
 }
@@ -165,9 +174,12 @@ header {
     width: 300px;
     transition: transform 0.3s, box-shadow 0.3s;
 }
-.service h2{
+
+.service h2 {
     background-color: #333;
+    color: #fff;
 }
+
 .service:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
@@ -183,11 +195,10 @@ header {
     transform: scale(1.05);
 }
 
-
 footer {
     text-align: center;
     padding: 1rem;
-    background: #333333d5;
+    background: rgba(51, 51, 51, 0.85);
     color: white;
     position: fixed;
     bottom: 0;
@@ -285,23 +296,8 @@ footer {
     margin-bottom: 1rem;
 }
 
-/* Botões de Agendamento e Confirmação */
-.btn-primary {
-    padding: 0.75rem 1.5rem;
-    background-color: #333;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-}
-
-.btn-primary:hover {
-    background-color: #4e5050;
-}
-
-/* Responsividade */
-@media screen and (max-width: 1170px) {
+/* Estilos Responsivos */
+@media screen and (max-width: 1168px) {
     #nav_list {
         display: none;
     }
@@ -344,25 +340,21 @@ footer {
     }
 }
 
-/*Sobre nós*/
-
-body {
-    background-color: #5f5d5d;
-}
-
+/* Seção Sobre Nós */
 .sobre-section {
     padding: 2rem 8%;
     text-align: center;
 }
 
 .sobre-section h2 {
+    padding: 60px;
     color: #fff;
     font-size: 2.5rem;
     margin-bottom: 1rem;
 }
 
 .sobre-section p {
-    color: #000000;
+    color: #000;
     font-size: 1.2rem;
     margin-bottom: 2rem;
 }
@@ -380,8 +372,13 @@ body {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     padding: 1.5rem;
     width: 250px;
-    text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.team-member img {
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 1rem;
 }
 
 .team-member:hover {
@@ -389,22 +386,12 @@ body {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
-.team-member img {
-    width: 100%;
-    border-radius: 15px;
-    transition: transform 0.3s;
+.team-member h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
 }
 
-.team-member img:hover {
-    transform: scale(1.05);
-}
-
-footer {
-    text-align: center;
-    padding: 1rem;
-    background: #333333d5;
-    color: white;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+.team-member p {
+    font-size: 1rem;
+    color: #666;
 }
