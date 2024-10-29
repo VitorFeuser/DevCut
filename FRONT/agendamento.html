@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Sistema de agendamento da DevCut Barbearia">
     <meta name="keywords" content="agendamento, barbearia, corte de cabelo, aparar barba">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer">
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
     <meta name="author" content="DevCut Barbearia">
     <title>Agendamento - DevCut Barbearia</title>
     <link rel="stylesheet" href="styles.css">
     <script defer src="script.js"></script>
 </head>
+
 <body>
     <header>
         <nav id="navbar">
@@ -36,24 +38,36 @@
         <section class="agendamento-section">
             <h2>Agendamento</h2>
             <form id="agendamentoForm">
+
                 <label for="nome">Nome:</label>
                 <input type="text" id="nome" name="nome" required>
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" required>
                 <label for="servico">Serviço:</label>
                 <select id="servico" name="servico" required>
+
                     <option value="corte">Corte de Cabelo - R$45</option>
                     <option value="barba">Aparar Barba - R$30</option>
                     <option value="tratamento">Tratamento Capilar - R$80</option>
                     <option value="sobrancelha">Sobrancelha - R$15</option>
                     <option value="infantil">Corte infantil - R$25</option>
-                    <option value="limpeza">Limpeza de pele - R$100</option>
+                    <option value="limpeza">Limpeza de pele - R$30</option>
+
+                    <label for="barbeiro">Selecionar Barbeiro:</label>
+                    <select id="barbeiro" name="barbeiro" required>
+                        <option value="" disabled selected>Escolha um barbeiro</option>
+                        <option value="joao">João Silva</option>
+                        <option value="pedro">Maria Oliveira</option>
+                        <option value="carlos">Carlos Pereira</option>
+                    </select>
+
                 </select>
                 <label for="data">Data:</label>
                 <input type="date" id="data" name="data" required>
                 <label for="horario">Horário:</label>
                 <input type="time" id="horario" name="horario" required>
                 <button type="submit" class="btn-primary">Agendar</button>
+
             </form>
             <div id="confirmationMessage"></div>
         </section>
@@ -62,4 +76,5 @@
         <p>© 2024 DevCut Barbearia. Todos os direitos reservados.</p>
     </footer>
 </body>
+
 </html>

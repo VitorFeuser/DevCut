@@ -275,7 +275,7 @@ footer {
 }
 
 /* Seção de Confirmação */
-.confirmacao-container {
+ /*.confirmacao-container {
     max-width: 600px;
     margin: 100px auto;
     background-color: #fff;
