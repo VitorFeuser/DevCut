@@ -13,7 +13,7 @@ body {
 
 header {
     width: 100%;
-    padding: 28px 8%;
+    padding: 20px;
     background-color: rgba(51, 51, 51, 0.85);
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
     position: fixed;
@@ -32,8 +32,7 @@ header {
 /* Logo */
 .logo {
     text-decoration: none;
-    color: #fff;
-    font-weight: 700;
+    color: #ffffff;
     font-size: 1.5rem;
     display: flex;
     align-items: center;
@@ -43,12 +42,13 @@ header {
 #nav_list {
     display: flex;
     list-style: none;
+    justify-content: center;
+    align-items: center;
     gap: 48px;
 }
 
 .nav-item a {
     text-decoration: none;
-    font-weight: 600;
     color: #fff;
     transition: color 0.3s, transform 0.3s;
 }
@@ -68,21 +68,24 @@ header {
     display: block;
     align-items: center;
     justify-content: center;
-    background-color: white;
+    background-color: #616161; /* Cor de fundo azul */
+    color: white; /* Cor do texto */
     border-radius: 12px;
-    padding: 10px 14px;
-    font-weight: 600;
-    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.1);
+    padding: 12px 20px; /* Aumentando o tamanho do botão */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Sombra mais pronunciada */
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transições suaves */
+    font-size: 1rem; /* Tamanho da fonte */
 }
 
 .btn-default:hover {
-    background-color: rgb(128, 127, 127);
+    background-color: #8b8b8b; /* Cor de fundo ao passar o mouse */
+    transform: translateY(-2px); /* Efeito de elevação ao passar o mouse */
 }
 
+
 #mobile_btn {
-    display: block;
+    display: none; /* Oculta o botão por padrão */
     border: none;
     background-color: transparent;
     font-size: 1.5rem;
@@ -90,15 +93,16 @@ header {
 }
 
 #mobile_servicos {
-    display: none;
+    display: none; /* Oculta o menu móvel por padrão */
     flex-direction: column;
     align-items: center;
     gap: 12px;
 }
 
 #mobile_servicos.active {
-    display: flex;
+    display: flex; /* Exibe o menu móvel quando ativo */
 }
+
 
 #mobile_nav_list {
     display: flex;
@@ -115,15 +119,16 @@ header {
 
 .hero {
     background: url('IMG/barbearia.jpg') no-repeat center center/cover;
-    filter: grayscale(10%);
-    color: white;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
-}
+    text-align: center;     
+        color: rgba(245, 245, 245, 0.993); 
+    }
+    
+
 
 .hero h2 {
     font-size: 3rem;
@@ -141,7 +146,6 @@ header {
     border-radius: 5px;
     margin-top: 1rem;
     display: inline-block;
-    font-weight: bold;
     background-color: #333;
     color: #fff;
     transition: background-color 0.3s ease;
@@ -157,27 +161,43 @@ header {
 .contact-section {
     padding: 2rem 8%;
     text-align: center;
+    
 }
 
+/* Atualização para o Estilo da Seção de Serviços */
 .service-container {
     display: flex;
-    gap: 2rem;
+    justify-content: center;
     flex-wrap: wrap;
+    gap: 4rem;
+    
+}
+
+/* Ajuste do Estilo da Seção de Serviços */
+.servicos-container {
+    display: flex; /* ou display: grid */
+    flex-wrap: wrap;
+    gap: 2rem; /* Ajuste o valor para o espaçamento desejado */
     justify-content: center;
 }
+
 
 .service {
     background: white;
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     padding: 1.5rem;
-    width: 300px;
+    width: 280px; /* Ajuste da largura para comportar imagens */
     transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
 }
 
-.service h2 {
-    background-color: #333;
-    color: #fff;
+.service img {
+    width: 100%;
+    height: 180px; /* Define uma altura fixa para as imagens */
+    object-fit: cover; /* Ajusta a imagem para cobrir o espaço sem distorcer */
+    border-radius: 15px;
+    margin-bottom: 1rem;
 }
 
 .service:hover {
@@ -185,25 +205,26 @@ header {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
-.service img {
-    width: 100%;
-    border-radius: 15px;
-    transition: transform 0.3s;
+.service h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #333;
 }
 
-.service img:hover {
-    transform: scale(1.05);
+.service p {
+    font-size: 1rem;
+    color: #666;
 }
 
 footer {
-    text-align: center;
-    padding: 1rem;
-    background: rgba(51, 51, 51, 0.85);
-    color: white;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+    background-color: #22222263; /* Cor de fundo do rodapé */
+    color: #fff; /* Cor do texto */
+    text-align: center; /* Centraliza o texto */
+    padding: 10px 0; /* Espaçamento acima e abaixo do texto */
+    font-size: 14px; /* Tamanho da fonte */
 }
+
+
 
 /* Seção de Agendamento */
 .agendamento-section {
@@ -212,7 +233,7 @@ footer {
     background-color: #fff;
     padding: 2rem;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
 }
 
 .agendamento-section h2 {
@@ -228,7 +249,6 @@ footer {
 }
 
 .agendamento-section label {
-    font-weight: 600;
     margin: 0.5rem 0;
     color: #333;
 }
@@ -256,7 +276,6 @@ footer {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-weight: bold;
     transition: background-color 0.3s ease;
 }
 
@@ -340,58 +359,66 @@ footer {
     }
 }
 
-/* Seção Sobre Nós */
+/* Ajuste do Estilo da Seção Sobre Nós */
 .sobre-section {
-    padding: 2rem 8%;
+    padding: 4rem 10%; /* Mais espaçamento ao redor da seção */
     text-align: center;
+    background-color: #a1a1a1; /* Fundo claro para destacar */
 }
 
 .sobre-section h2 {
-    padding: 60px;
-    color: #fff;
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+    color: #333;
+    font-size: 2.8rem; /* Fonte maior para o título */
+    margin-bottom: 1.5rem;
+    letter-spacing: 1   px;
 }
 
 .sobre-section p {
-    color: #000;
+    color: #555;
     font-size: 1.2rem;
-    margin-bottom: 2rem;
+    max-width: 800px; /* Limite de largura para melhorar a leitura */
+    margin: 0 auto 3rem;
+    line-height: 1.6;
 }
 
 .team-container {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 2rem;
+    gap: 3rem; /* Mais espaçamento entre os membros */
 }
 
 .team-member {
     background: white;
     border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    padding: 1.5rem;
-    width: 250px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    padding: 2rem;
+    width: 260px; /* Ajuste da largura dos cartões */
     transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
 }
 
 .team-member img {
     width: 100%;
+    height: 220px; /* Ajuste de altura das imagens */
+    object-fit: cover;
     border-radius: 15px;
     margin-bottom: 1rem;
 }
 
 .team-member:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-8px); /* Elevação sutil ao passar o mouse */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .team-member h3 {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     margin-bottom: 0.5rem;
+    color: #333;
 }
 
 .team-member p {
     font-size: 1rem;
     color: #666;
+    line-height: 1.4;
 }
