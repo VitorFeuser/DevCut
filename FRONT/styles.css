@@ -7,9 +7,12 @@
     box-sizing: border-box;
 }
 
+
 body {
-    background-color: #5f5d5d;
+    background-color: #747474;
 }
+
+
 
 header {
     width: 100%;
@@ -58,10 +61,7 @@ header {
     transform: scale(1.1);
 }
 
-.nav-item.active a {
-    color: #fff;
-    border-bottom: 4px solid #222;
-}
+
 
 .btn-default {
     border: none;
@@ -156,9 +156,11 @@ header {
 }
 
 /* Seções de Serviços, Sobre, Contato */
+
 .services-section,
-.about-section,
-.contact-section {
+.about-section
+.contact {
+
     padding: 2rem 8%;
     text-align: center;
     
@@ -217,103 +219,12 @@ header {
 }
 
 footer {
-    background-color: #22222263; /* Cor de fundo do rodapé */
+    background-color: #222222c2; /* Cor de fundo do rodapé */
     color: #fff; /* Cor do texto */
     text-align: center; /* Centraliza o texto */
     padding: 10px 0; /* Espaçamento acima e abaixo do texto */
     font-size: 14px; /* Tamanho da fonte */
-}
-
-
-
-/* Seção de Agendamento */
-.agendamento-section {
-    max-width: 600px;
-    margin: 100px auto 50px;
-    background-color: #fff;
-    padding: 2rem;
-    border-radius: 10px;
-
-}
-
-.agendamento-section h2 {
-    text-align: center;
-    color: #333;
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
-}
-
-.agendamento-section form {
-    display: flex;
-    flex-direction: column;
-}
-
-.agendamento-section label {
-    margin: 0.5rem 0;
-    color: #333;
-}
-
-.agendamento-section input,
-.agendamento-section select {
-    padding: 0.5rem;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    margin-bottom: 1rem;
-    font-size: 1rem;
-    outline: none;
-    transition: border-color 0.3s ease;
-}
-
-.agendamento-section input:focus,
-.agendamento-section select:focus {
-    border-color: #333;
-}
-
-.agendamento-section .btn-primary {
-    padding: 0.75rem;
-    background-color: #333;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.agendamento-section .btn-primary:hover {
-    background-color: #535353;
-}
-
-#confirmationMessage {
-    margin-top: 1.5rem;
-    padding: 1rem;
-    background-color: #f9f9f9;
-    border-radius: 5px;
-    text-align: center;
-    color: #333;
-    font-size: 1rem;
-}
-
-/* Seção de Confirmação */
- /*.confirmacao-container {
-    max-width: 600px;
-    margin: 100px auto;
-    background-color: #fff;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-.confirmacao-container h2 {
-    color: #333;
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
-}
-
-.confirmacao-container p {
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
-}
+}   
 
 /* Estilos Responsivos */
 @media screen and (max-width: 1168px) {
