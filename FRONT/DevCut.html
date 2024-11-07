@@ -4,19 +4,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="DevCut Barbearia oferece uma experiência única para desenvolvedores com serviços modernos de corte de cabelo, aparar barba e tratamento capilar.">
+    <meta name="description" content="DevCut Barbearia oferece uma experiência única para desenvolvedores com serviços modernos de corte de cabelo, aparar barba e tratamento capilar.">
     <meta name="keywords" content="barbearia, corte de cabelo, aparar barba, tratamento capilar, desenvolvedores">
     <meta name="author" content="DevCut Barbearia">
     <title>DevCut Barbearia</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="styles.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
-        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <style>
+        /* Bem-vindo a DevCut */
+        .welcome-text {
+            font-size: 3rem;
+            color: #ffffff;
+            text-shadow: 2px 2px 5px rgb(0, 0, 0);
+        }
+
+        .devcut-text {
+            color: #ffffff; /* Dourado ou qualquer cor que você preferir para "DevCut" */
+            font-weight: bold;
+        }
+
+        /* Título de Serviços */
+        .services-title {
+            font-size: 2.5rem;
+            color: #ffffff;
+            text-align: center;
+            margin-bottom: 2rem;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* sombra de texto com deslocamento e desfoque */
+
+        }
+    </style>
 </head>
+
 
 <body>
     <header>
@@ -29,36 +48,26 @@
                 <button class="btn-default" onclick="window.location.href='agendamento.html'">Agendar</button>
             </ul>
             <button id="mobile_btn" class="mobile_btn" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
-<div id="mobile_servicos" class="mobile-menu">
-    <ul id="mobile_nav_list">
-        <li class="nav-item"><a href="#home">Home</a></li>
-        <li class="nav-item"><a href="#servicos">Serviços</a></li>
-        <li class="nav-item"><a href="sobre.html">Sobre Nós</a></li>
-    </ul>
-    <button class="btn-default" onclick="window.location.href='agendamento.html'">Agendar</button>
-</div>
-
-
+            <div id="mobile_servicos" class="mobile-menu">
+                <ul id="mobile_nav_list">
+                    <li class="nav-item"><a href="#home">Home</a></li>
+                    <li class="nav-item"><a href="#servicos">Serviços</a></li>
+                    <li class="nav-item"><a href="sobre.html">Sobre Nós</a></li>
+                </ul>
+                <button class="btn-default" onclick="window.location.href='agendamento.html'">Agendar</button>
+            </div>
         </nav>
-        <div id="mobile_servicos" class="mobile-menu">
-            <ul id="mobile_nav_list">
-                <li class="nav-item"><a href="#home">Home</a></li>
-                <li class="nav-item"><a href="#servicos">Serviços</a></li>
-                <li class="nav-item"><a href="#sobre">Sobre Nós</a></li>
-            </ul>
-            <button class="btn-default" onclick="window.location.href='agendamento.html'">Agendar</button>
-        </div>
     </header>
     <main>
         <section id="home" class="hero-section">
             <div class="hero">
-                <h2 style="text-shadow: 2px 2px 5px rgb(0, 0, 0);">Bem-vindo a DevCut</h2> 
+                <h2 class="welcome-text">Bem-vindo a <span class="devcut-text">DevCut</span></h2> 
                 <a href="#servicos" class="btn btn-primary">Nossos Serviços</a>
             </div>
-            
         </section>
+
         <section id="servicos" class="services-section">
-            <h2>Serviços</h2>
+            <h2 class="services-title">Serviços</h2>
             <div class="service-container">
                 <div class="service">
                     <img src="IMG/corte.jpg" alt="Corte de Cabelo">

@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
+    // Menu mobile
     const mobileBtn = document.getElementById("mobile_btn");
     const mobileMenu = document.getElementById("mobile_servicos");
 
@@ -6,6 +7,22 @@ document.addEventListener("DOMContentLoaded", function() {
         mobileMenu.classList.toggle("active"); // Alterna a classe 'active' no menu
     });
 
+    // Função para scroll suave com ajuste para cabeçalho fixo
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute("href").substring(1); // Pega o id da seção
+            const targetElement = document.getElementById(targetId);
+
+            // Calcula a posição do alvo com o offset do cabeçalho fixo
+            window.scrollTo({
+                top: targetElement.offsetTop - document.querySelector("header").offsetHeight,
+                behavior: "smooth"
+            });
+        });
+    });
+
+    // Função para o formulário de agendamento
     document.getElementById('agendamentoForm').addEventListener('submit', function(event) {
         event.preventDefault(); // Impede o envio real do formulário
 
