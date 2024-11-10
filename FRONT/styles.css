@@ -14,7 +14,7 @@ html {
 }
 
 body {
-    background: url('IMG/babearia5.jpg') no-repeat center center/cover;
+    background: url('IMG/barber9.jpg') no-repeat center center/cover;
     background-attachment: fixed;
     background-size: cover;
     color: #000000;
@@ -160,7 +160,7 @@ header {
     padding: 2rem 8%;
     text-align: center;
     background-color: rgba(255, 255, 255, 0);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(252, 248, 248, 0.1);
 }
 
 .service-container {
@@ -171,9 +171,9 @@ header {
 }
 
 .service {
-    background: #e7e7e7a4;
+    background: #706d6dfd;
     border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 15px rgba(238, 235, 235, 0.993);
     padding: 1.5rem;
     width: 280px;
     transition: transform 0.3s, box-shadow 0.3s;
